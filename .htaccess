@@ -1,0 +1,27 @@
+RewriteEngine on
+ErrorDocument 404 http://localhost/insaat/404.php
+RewriteRule ^bize-ulasin$ iletisim.php [NC,L]
+RewriteRule ^anasayfa$ index.php [NC,L]
+RewriteRule ^hakkımızda$ hakkımızda.php [NC,L]
+RewriteRule ^haberler$ haberler.php [NC,L]
+RewriteRule ^sitemap.xml$ sitemap.php [NC,L]
+RewriteRule ^arama$ arama.php [NC,L]
+
+RewriteRule ^dahafazla$ hakkımızda-detay.php [NC,L]
+RewriteRule ^projeler$ projeler.php [NC,L]
+RewriteRule ^sirketimiz$ sirketimiz.php [NC,L]
+RewriteRule ^proje-detay$ proje-detay.php [NC,L]
+RewriteRule ^devamproje$ devam-eden-projeler.php [NC,L]
+RewriteRule ^hazırproje$ hazır-projeler.php [NC,L]
+RewriteRule ^bitmisproje$ bitmis-projeler.php [NC,L]
+RewriteRule ^haber-([0-9a-zA-Z-_]+)-([0-9]+)$ haber-detay.php?sef=$1&id=$2 [L,QSA]
+RewriteRule ^proje-([0-9a-zA-Z-_]+)-([0-9]+)$ proje-detay.php?sef=$1&proje_id=$2 [L,QSA]
+
+
+
+
+
+
+#RewriteRule ^urunler/([0-9a-zA-Z-_]+)-([0-9]+)$ urunler.php?sef=$1&urun_id=$2 [L,QSA]
+#RewriteRule ^kategoriler/([0-9a-zA-Z-_]+)-([0-9]+)$ kategoriler.php?sef=$1 [L,QSA]
+#RewriteRule ^urun-detay/([0-9a-zA-Z-_]+)-([0-9]+)$ urun-detay.php?sef=$1&urun_id=$2 [L,QSA]
